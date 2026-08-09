@@ -34,7 +34,7 @@ async function copybload (url){
 }
 
 async function fetchRequest(formData, file){
-    let response = await fetch ("http://api.qrserver.com/v1/read-qr-code/", {
+    let response = await fetch ("https://api.qrserver.com/v1/read-qr-code/", {
         method: "POST", body: formData
     })
     let dat = await response.json()
@@ -47,8 +47,8 @@ fileinput.addEventListener("change", e => {
     let file = e.target.files[0]
     let formData = new FormData()
     formData.append("file", file)
-    img2.src=""
     fetchRequest(formData, file)
+    img2.src=""
     
 })
 
