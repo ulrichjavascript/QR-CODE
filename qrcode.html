@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="generateur et lecteur de qrcode">
+    <link rel="shortcut icon" href="img/qrcode.jpg">
+    <link rel="stylesheet" href="qrcode.css">
+    <title>qrCod</title>
+  </head>
+  <body>
+    <header>
+      <img src="img/qrcode.jpg" alt="qrcod" class="qr">
+      <p class="titre">qrcod</p>
+    </header>
+
+      <div class="global">
+
+        <aside class="aside">
+          <p class="aside1">type de qr code</p>
+          <ul>
+            <li>texte</li>
+          </ul>
+        </aside>
+        
+        <main class="generator">
+
+          <p class="hight">generateur</p>
+
+           <div class="main1">
+
+            <div class="one">
+              <label for="text"></label>
+              <input type="text" name="text" id="text" required placeholder="Entrer un lien, texte ">
+              <button id="submit">Generer QR code</button>
+            </div>
+
+            <div class="frame">
+              <div class="frame1">
+                <img src="" alt="qrcode" id="img">
+              </div>
+              <p><button id="copy">Télécharger</button></p>
+            </div>
+
+           </div>
+  
+          <p class="hight">lecteur</p>
+
+          <div class="wrapper">
+            <div class="wrapper1">
+              <div class="frame2" >
+                <img src="" alt="qrcode2" id="img2">
+              </div>
+              <input type="file" class="file" id="file">
+            </div>
+            <div class="wrapper2">
+                <p class="p"></p>
+                <button class="close">fermer</button>
+            </div>
+          </div>
+  
+        </main>
+  
+      </div>
+  
+      <footer>
+        <p>Développé par : Assoa ulrich</p>
+        <p>email : ulrich.assoa@gmail.com</p>
+        <p>hebergeur : www.netlify.com </p>
+      </footer>
+      
+    <script  src="qrcode.js"></script>
+  </body>
+</html>
