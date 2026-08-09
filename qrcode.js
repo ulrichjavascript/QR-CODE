@@ -47,8 +47,9 @@ fileinput.addEventListener("change", e => {
     let file = e.target.files[0]
     let formData = new FormData()
     formData.append("file", file)
-    fetchRequest(formData, file)
     img2.src=""
+    fetchRequest(formData, file)
+    
 })
 
 closes.addEventListener("click",()=>{
