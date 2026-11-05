@@ -12,7 +12,7 @@ let closes = document.querySelector('.close')
 submit.addEventListener("click", ()=> {
     let textvalue = text.value
     img.src = ""
-    img.src = `http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${textvalue}`
+    img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${textvalue}`
     
       
 })
@@ -37,7 +37,7 @@ async function copybload (url){
 async function fetchRequest(formData, file){
     img2.src=""
     img2.src= URL.createObjectURL(file)
-    let response = await fetch(`http://api.qrserver.com/v1/read-qr-code/`, {
+    let response = await fetch(`https://api.qrserver.com/v1/read-qr-code/`, {
         method:"POST", body: formData
     })
 
