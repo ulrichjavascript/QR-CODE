@@ -19,6 +19,7 @@ header{
 .titre{
     color: white;
     padding: 10px;
+    font-size: 30px;
 }
 
 .qr{
@@ -94,6 +95,7 @@ footer {
 
  .aside1{
     text-transform: uppercase;
+    font-weight: bold;
  }
 
 #submit,#copy {
@@ -101,6 +103,8 @@ footer {
     border: 1px solid lightgreen;
     border-radius: 50px;
     padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .close {
@@ -109,6 +113,8 @@ footer {
     border-radius: 50px;
     padding: 8px;
     color: white;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 
@@ -126,6 +132,16 @@ footer {
     border: 1px solid lightgrey;
     text-align: center;
     
+}
+
+@media screen and (max-width : 1125px) {
+    body{
+        font-size: 25px;
+    }
+
+    .global{
+        height: 118vh;
+    }
 }
 
 
