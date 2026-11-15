@@ -1,13 +1,14 @@
-let text = document.querySelector('#text')
-let submit = document.querySelector('#submit')
-let img = document.querySelector('#img')
-let copy = document.querySelector('#copy')
-let form = document.querySelector("form")
+import "./node_modules/barcode-detector/dist/es/polyfill.js";
+let text = document.querySelector("#text")
+let submit = document.querySelector("#submit")
+let img = document.querySelector("#img")
+let copy = document.querySelector("#copy")
 
-let fileinput = document.querySelector('#top')
-let img2 = document.querySelector('#img2')
-let p = document.querySelector('.p')
-let closes = document.querySelector('.close')
+let fileinput = document.querySelector("#fileinput")
+let img2 = document.querySelector("#img2")
+let p = document.querySelector(".p")
+let closes = document.querySelector(".close")
+let clear = document.querySelector(".clear")
 
 submit.addEventListener("click", ()=> {
     let textvalue = text.value
@@ -34,26 +35,33 @@ async function copybload (url){
 
 }
 
-async function fetchRequest(formData, file){
+clear.addEventListener("click", ()=>{
+    text.value = ""
+    img.src = ""
+})
+
+fileinput.addEventListener("change", async() => {
+
+    let file = fileinput.files[0]
+    if(!file) return
     img2.src=""
     img2.src= URL.createObjectURL(file)
-    let response = await fetch(`https://api.qrserver.com/v1/read-qr-code/`, {
-        method:"POST", body: formData
-    })
 
-    let dat = await response.json()
-    let result = dat[0].symbol[0].data
-    p.innerText = result  
     
-} 
+    const detector = new BarcodeDetector({formats :["qr_code"]})
+    const image = await createImageBitmap(file)
+    const code = await detector.detect(image)
 
-fileinput.addEventListener("change", e => {
-    let file = e.target.files[0]
-    let formData = new FormData()
-    formData.append('file',file)
-    fetchRequest(formData, file)
-     
+    image.close();
+
+    if (code.length > 0) {
+        p.innerHTML = code[0].rawValue
+    } else {
+      console.log("Aucun QR code détecté dans cette image.");
+    }
+      
 })
+
 
 
 closes.addEventListener("click",()=>{

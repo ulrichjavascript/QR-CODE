@@ -32,12 +32,13 @@ header{
     display: flex;
     justify-content:flex-start;
     width:100%;  
-    height: 115vh;
+    height: 170vh;
+    
 }
 
 .aside{
     background: lightgreen;
-    width: 25%;
+    width: 20%;
     padding: 10px;
     box-shadow: 0 4px 30px rgb(211, 208, 208);
 }
@@ -45,8 +46,8 @@ header{
 .generator{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 65%;
+    align-items: center; 
+    width: 70%;
     margin-top: 40px;
 }
 
@@ -62,34 +63,51 @@ footer {
 }
 .frame{
     margin-left: 100px;
+    height: 350px;
+    width: 300px;
+    border: 2px solid lightgreen; 
+    box-shadow: 0 4px 30px rgb(161, 158, 158);
 }
 
-.frame1{
-    height: 200px;
-    width: 250px;
-    border: 1px solid green; 
+.frame1, .frame2 {
+    margin: 30px;
+    margin-left: 50px;
+    height: 150px;
+    width: 200px;
+    border: 1px dashed rgb(109, 106, 106); 
 }
-
-
 
 #img,#img2{
-    height: 150px;
-    width: 50%;
-    margin-top: 30px;
-    margin-left: 35px;
-    
+    height: 120px;
+    width: 70%;
+    margin-top: 15px;
+    margin-left: 29px;
+      
     
  }
 
  .wrapper{
-    display: flex;
-    margin-bottom: 20px;
+    height: 370px;
+    width: 300px;
+    border: 2px solid violet; 
+    box-shadow: 0 4px 30px rgb(161, 158, 158);
+    align-self: flex-start;
+    margin-left: 150px;
  }
 
- .hight{
+ .hight1{
     text-transform: uppercase;
     font-weight: bold;
     color: blue;
+    margin-right: 150px;
+ }
+
+ .hight{
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: blue;
+    margin-left: 100px;
     
  }
 
@@ -98,38 +116,56 @@ footer {
     font-weight: bold;
  }
 
+ .fast {
+    display: flex;
+    justify-content: center;
+ }
+
+ .button{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+ }
+
 #submit,#copy {
-    background: lightgreen;
-    border: 1px solid lightgreen;
-    border-radius: 50px;
+    background: blue;
+    color: white;
     padding: 5px;
     font-weight: bold;
+    font-size: 17px;
+}
+
+.clear{
+    background: violet;
+    border: 1px solid blueviolet;
+    padding: 8px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
     font-size: 15px;
+    width: 70%;
+    align-self: center;
 }
 
 .close {
     background: blueviolet;
     border: 1px solid blueviolet;
-    border-radius: 50px;
     padding: 8px;
     color: white;
     font-weight: bold;
     font-size: 15px;
-}
-
-
-
-.frame2{
-    height: 200px;
-    width: 250px;
-    border: 1px solid violet; 
+    width: 70%;
 }
 
 .wrapper2{
-    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .p{
-    border: 1px solid lightgrey;
+    height: 30px;
+    width: 70%;
+    border: 2px solid lightgrey;
     text-align: center;
     
 }
@@ -139,9 +175,6 @@ footer {
         font-size: 25px;
     }
 
-    .global{
-        height: 118vh;
-    }
 }
 
 
