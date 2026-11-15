@@ -1,4 +1,4 @@
-import "./node_modules/barcode-detector/dist/es/polyfill.js";
+import "./libs/polyfill.js";
 let text = document.querySelector("#text")
 let submit = document.querySelector("#submit")
 let img = document.querySelector("#img")
